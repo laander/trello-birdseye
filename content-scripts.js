@@ -41,8 +41,9 @@ function clickButton() {
 
 // Checks whether the button element is present - if not (user switched page/board), then init
 function shouldInit(event) {
-  var buttonTarget = document.getElementsByClassName('birdseye-button');
-  if (buttonTarget.length === 0) {
+  var buttonTarget = document.getElementsByClassName('board-header-btns mod-right');
+  var buttonContainer = document.getElementsByClassName('birdseye-button');
+  if (buttonTarget.length !== 0 && buttonContainer.length === 0) {
     initApplication();
   }
 }

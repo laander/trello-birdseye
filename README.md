@@ -1,6 +1,6 @@
-# Trello BirdsEye
+# Trello Birds-eye View
 
-> Chrome Extension for minimal board styling giving you a birds-eye view in Trello
+> Chrome Extension for minimalistic board/card styling giving you a birds-eye view in Trello
 
 ![Before & after](images/screenshot-comparison.gif)
 

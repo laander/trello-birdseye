@@ -9,3 +9,9 @@ Trello is great, but if you have a lot of cards on your boards, the interface be
 
 **How?**
 This small Chrome Extension adds an extra button to the Trello toolbar. Click it and you get more than *50% more actual content on your screen*. Yes, 50 fucking percent.
+
+## Install
+
+[**Add the extension to Chrome** from the webstore](https://chrome.google.com/webstore/detail/trello-birdseye/jddlcajmgfdpfnekdppnapoldfhabkeg)
+
+That's it. Look for the "Birds Eye" button in the boards toolbar in Trello :+1:

@@ -5,46 +5,56 @@
 .birdseye .list-wrapper {
     margin: 0 0px;
 }
+
 .birdseye .list {
     background: transparent;
     color: white;
 }
+
 .birdseye .list-cards {
     margin: 0 3px;
     padding: 0;
     border-radius: 3px;
 }
+
 .birdseye .list-card {
     margin-bottom: 0px;
     border-radius: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
+
 .birdseye .list-header-menu-icon {
     color: rgba(255, 255, 255, 0.5);
 }
+
 .birdseye .list-header-menu-icon:hover,
 .birdseye .list-header-menu-icon.icon-sm.dark-hover:hover {
     color: rgba(255, 255, 255, 1);
 }
+
 .birdseye .open-card-composer {
     color: rgba(255, 255, 255, 0.5);
 }
+
 .birdseye .open-card-composer:hover {
     background-color: transparent;
     color: #FFFFFF;
 }
+
 .birdseye .list-card .icon-edit:before {
     content: "";
 }
+
 .birdseye .list-card-operation {
     border-radius: 3px 0 0 3px;
     padding: 0;
     left: 0px;
-    width: 100%;
-    height: 100%;
+    width: 0%;
+    height: 0%;
     background: transparent;
     bottom: 0;
 }
+
 .birdseye .list-card-members {
     float: none;
     margin: 0;
@@ -53,33 +63,42 @@
     position: absolute;
     right: 2px;
 }
+
 .birdseye .list-card-members .member {
-   line-height: 0;
+    line-height: 0;
 }
+
 .birdseye .list-card-details .badges {
     display: none;
 }
+
 .birdseye .list-card-labels {
     margin: 0px 0;
     position: absolute;
     right: 3px;
 }
+
 .birdseye .list-card-labels .card-label {
     width: 8px;
 }
+
 .birdseye .list-card-members .member {
     height: 20px;
     width: 20px;
 }
+
 .birdseye .list-card-members .member-avatar {
     height: 20px;
     width: 20px;
 }
 
+
 /* Scrollbar syling in card */
+
 .birdseye .list-cards.u-fancy-scrollbar::-webkit-scrollbar-track-piece {
     background: transparent;
 }
+
 .birdseye .list-cards.u-fancy-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 }

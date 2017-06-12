@@ -52,6 +52,6 @@ function shouldInit(event) {
 // uggggllly hax to continiously check whether user has switched page/board
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
-    setInterval(shouldInit, 2000);
+    setInterval(shouldInit, 1000);
   }
 };

@@ -2,103 +2,117 @@
  * Overwrites the Trello styles when .birdseye is set on body
  */
 
+.birdseye textarea.mod-list-name {
+  color: white;
+}
+
 .birdseye .list-wrapper {
-    margin: 0 0px;
+  margin: 0 0px;
 }
 
 .birdseye .list {
-    background: transparent;
-    color: white;
+  background: transparent;
+  color: white;
 }
 
 .birdseye .list-cards {
-    margin: 0 3px;
-    padding: 0;
-    border-radius: 3px;
+  margin: 0 3px;
+  padding: 0;
+  border-radius: 3px;
 }
 
 .birdseye .list-card {
-    margin-bottom: 0px;
-    border-radius: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 0px;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .birdseye .list-header-menu-icon {
-    color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .birdseye .list-header-menu-icon:hover,
 .birdseye .list-header-menu-icon.icon-sm.dark-hover:hover {
-    color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .birdseye .open-card-composer {
-    color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .birdseye .open-card-composer:hover {
-    background-color: transparent;
-    color: #FFFFFF;
-}
-
-.birdseye .list-card .icon-edit:before {
-    content: "";
+  background-color: transparent;
+  color: #FFFFFF;
 }
 
 .birdseye .list-card-operation {
-    border-radius: 3px 0 0 3px;
-    padding: 0;
-    left: 0px;
-    width: 0%;
-    height: 0%;
-    background: transparent;
-    bottom: 0;
+  display: none;
 }
 
-.birdseye .list-card-members {
-    float: none;
-    margin: 0;
-    display: none;
-    top: 6px;
-    position: absolute;
-    right: 2px;
+/* Card details */
+
+.birdseye .list-card-title {
+  clear: none;
+  margin-left: 0;
+  display: inline;
 }
 
-.birdseye .list-card-members .member {
-    line-height: 0;
+.birdseye .list-header-extras-menu:hover {
+  background: inherit;
+}
+
+.birdseye .list-header-extras-menu .icon-sm {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.birdseye .list-header-extras-menu:hover .icon-sm {
+  color: white;
+}
+
+.birdseye .list-card-details {
+  padding: 6px 6px 6px 8px;
 }
 
 .birdseye .list-card-details .badges {
-    display: none;
+  display: none;
 }
 
 .birdseye .list-card-labels {
-    margin: 0px 0;
-    position: absolute;
-    right: 3px;
+  margin: 0;
+  float: right;
 }
 
 .birdseye .list-card-labels .card-label {
-    width: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 4px 0px 3px 3px;
+}
+
+.birdseye .list-card-members {
+  float: right;
+  margin: 0;
 }
 
 .birdseye .list-card-members .member {
-    height: 20px;
-    width: 20px;
+  height: 15px;
+  width: 15px;
+  line-height: 0;
+  border-radius: 15px;
+  margin: 2px 0 0px 4px;
 }
 
 .birdseye .list-card-members .member-avatar {
-    height: 20px;
-    width: 20px;
+  height: 15px;
+  width: 15px;
 }
-
 
 /* Scrollbar syling in card */
 
 .birdseye .list-cards.u-fancy-scrollbar::-webkit-scrollbar-track-piece {
-    background: transparent;
+  background: transparent;
 }
 
 .birdseye .list-cards.u-fancy-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
 }

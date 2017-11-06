@@ -10,6 +10,8 @@ function initApplication() {
   var buttonContainer = document.createElement('a');
   buttonContainer.className = 'birdseye-button board-header-btn';
   buttonContainer.setAttribute('href', '#');
+  buttonContainer.setAttribute('id', 'BirdseyeToggle');
+  buttonContainer.setAttribute('state', false);
   buttonContainer.addEventListener('click', clickButton);
 
   var iconContainer = document.createElement('span');
@@ -23,20 +25,28 @@ function initApplication() {
   buttonContainer.appendChild(iconContainer);
   buttonContainer.appendChild(textContainer);
 
-  buttonTarget.insertBefore(buttonContainer, buttonTarget.firstChild );
+  buttonTarget.insertBefore(buttonContainer, buttonTarget.firstChild);
 
   // When switching pages/boards, the button loses its enabled class, so re-add it
   var body = document.getElementsByTagName('body')[0];
   if (body.classList.contains('birdseye')) {
     buttonContainer.classList.toggle('board-header-btn-enabled');
   }
+
+  BirdseyeLoadState();
 }
 
 // Clicking on the button triggers the class toggling
 function clickButton() {
+  let button = document.getElementById('BirdseyeToggle');
+  let currentState = button.getAttribute('state') == 'true' ? true : false;
+  button.setAttribute('state', !currentState);
+
   var body = document.getElementsByTagName('body')[0];
   body.classList.toggle('birdseye');
-  this.classList.toggle('board-header-btn-enabled');
+  button.classList.toggle('board-header-btn-enabled');
+
+  BirdseyeSaveState(button.getAttribute('state'));
 }
 
 // Checks whether the button element is present - if not (user switched page/board), then init
@@ -50,8 +60,33 @@ function shouldInit(event) {
 
 // Initializes on first page load +
 // uggggllly hax to continiously check whether user has switched page/board
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
-    setInterval(shouldInit, 1000);
+    shouldInit();
+    setInterval(shouldInit, 3000);
   }
 };
+
+function BirdseyeSaveState(state) {
+  chrome.storage.sync.set({
+    "BirdseyeState": state
+  }, () => {});
+}
+
+function BirdseyeLoadState() {
+  let button = document.getElementById('BirdseyeToggle');
+
+  //Get the button state from chrome storage, if its different from what is set, set it to new state
+  try {
+    chrome.storage.sync.get("BirdseyeState", function (items) {
+      if (button.getAttribute('state') != items.BirdseyeState) {
+        clickButton();
+      }
+    });
+  } catch (e) {
+    button.setAttribute('state', false);
+    chrome.storage.sync.set({
+      "BirdseyeState": false
+    })
+  }
+}

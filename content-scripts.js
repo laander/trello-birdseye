@@ -13,8 +13,8 @@ document.onreadystatechange = function () {
 
 // Checks whether the button element is present - if not (user switched page/board), then init
 function shouldInit(event) {
-  var buttonTarget = document.getElementsByClassName('board-header-btns mod-right')
-  var buttonContainer = document.getElementsByClassName('birdseye-button')
+  let buttonTarget = document.getElementsByClassName('board-header-btns mod-right')
+  let buttonContainer = document.getElementsByClassName('birdseye-button')
   if (buttonTarget.length !== 0 && buttonContainer.length === 0) {
     initApplication()
   }
@@ -23,29 +23,28 @@ function shouldInit(event) {
 // Create the button and inject into to toolbar
 function initApplication() {
 
-  var buttonTarget = document.getElementsByClassName('board-header-btns mod-right')[0]
-
-  var buttonContainer = document.createElement('a')
+  let buttonContainer = document.createElement('a')
   buttonContainer.className = 'birdseye-button board-header-btn'
   buttonContainer.setAttribute('href', '#')
   buttonContainer.setAttribute('id', 'BirdseyeToggle')
   buttonContainer.addEventListener('click', clickButton)
 
-  var iconContainer = document.createElement('span')
+  let iconContainer = document.createElement('span')
   iconContainer.className = 'icon-sm icon-subscribe board-header-btn-icon'
 
-  var textContainer = document.createElement('span')
+  let textContainer = document.createElement('span')
   textContainer.className = 'board-header-btn-text u-text-underline'
-  var text = document.createTextNode('Birds Eye')
 
+  let text = document.createTextNode('Birds Eye')
   textContainer.appendChild(text)
   buttonContainer.appendChild(iconContainer)
   buttonContainer.appendChild(textContainer)
 
+  let buttonTarget = document.getElementsByClassName('board-header-btns mod-right')[0]
   buttonTarget.insertBefore(buttonContainer, buttonTarget.firstChild)
 
   // When switching pages/boards, the button loses its enabled class, so re-add it
-  var body = document.getElementsByTagName('body')[0]
+  let body = document.getElementsByTagName('body')[0]
   if (body.classList.contains('birdseye')) {
     buttonContainer.classList.toggle('board-header-btn-enabled')
   }

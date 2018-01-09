@@ -1,6 +1,6 @@
 /**
- * Overwrites the Trello styles when .birdseye is set on body
- */
+* Overwrites the Trello styles when .birdseye is set on body
+*/
 
 .birdseye textarea.mod-list-name {
   color: white;
@@ -49,6 +49,7 @@
   display: none;
 }
 
+
 /* Card details */
 
 .birdseye .list-card-title {
@@ -83,6 +84,7 @@
 }
 
 .birdseye .list-card-labels .card-label {
+  min-width: 8px;
   width: 10px;
   height: 10px;
   border-radius: 10px;
@@ -106,6 +108,7 @@
   height: 15px;
   width: 15px;
 }
+
 
 /* Scrollbar syling in card */
 

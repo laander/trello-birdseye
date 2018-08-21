@@ -6,6 +6,10 @@
   color: white;
 }
 
+.birdseye .list-header-num-cards {
+  color: white;
+}
+
 .birdseye .list-wrapper {
   margin: 0 0px;
 }
@@ -31,12 +35,18 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+.list-header-extras-menu {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .birdseye .list-header-menu-icon:hover,
 .birdseye .list-header-menu-icon.icon-sm.dark-hover:hover {
   color: rgba(255, 255, 255, 1);
 }
 
-.birdseye .open-card-composer {
+.birdseye .open-card-composer,
+.birdseye .open-card-composer .icon-lg,
+.birdseye .open-card-composer .icon-sm {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -104,7 +114,7 @@
   margin: 2px 0 0px 4px;
 }
 
-.birdseye .list-card-members .member-avatar {
+.birdseye .list-card-members .member .member-avatar {
   height: 15px;
   width: 15px;
 }

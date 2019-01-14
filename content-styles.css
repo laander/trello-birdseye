@@ -31,12 +31,20 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.birdseye .list-card-cover {
+  display: none;
+}
+
 .birdseye .list-header-menu-icon {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.list-header-extras-menu {
+.birdseye .list-header-extras-menu {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.birdseye .list-header-extras-menu:hover {
+  color: rgba(255, 255, 255, 1) !important;
 }
 
 .birdseye .list-header-menu-icon:hover,
@@ -48,6 +56,12 @@
 .birdseye .open-card-composer .icon-lg,
 .birdseye .open-card-composer .icon-sm {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.birdseye .open-card-composer:hover,
+.birdseye .open-card-composer:hover .icon-lg,
+.birdseye .open-card-composer:hover .icon-sm {
+  color: rgba(255, 255, 255, 1) !important;
 }
 
 .birdseye .open-card-composer:hover {
